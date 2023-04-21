@@ -1,0 +1,15 @@
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\bin\Debug\net7.0\CalculateFinalGPAProject.exe
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\bin\Debug\net7.0\CalculateFinalGPAProject.deps.json
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\bin\Debug\net7.0\CalculateFinalGPAProject.runtimeconfig.json
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\bin\Debug\net7.0\CalculateFinalGPAProject.dll
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\bin\Debug\net7.0\CalculateFinalGPAProject.pdb
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.csproj.AssemblyReference.cache
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.AssemblyInfoInputs.cache
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.AssemblyInfo.cs
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.csproj.CoreCompileInputs.cache
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.dll
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\refint\CalculateFinalGPAProject.dll
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.pdb
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\CalculateFinalGPAProject.genruntimeconfig.cache
+C:\Users\Albert\Desktop\CSharp\CalculateFinalGPAProject\obj\Debug\net7.0\ref\CalculateFinalGPAProject.dll
