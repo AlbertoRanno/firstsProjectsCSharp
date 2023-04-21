@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\whichNumberIsBigger\\whichNumberIsBigger.csproj": {}
+    "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\conditionals\\conditionals.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\whichNumberIsBigger\\whichNumberIsBigger.csproj": {
+    "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\conditionals\\conditionals.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\whichNumberIsBigger\\whichNumberIsBigger.csproj",
-        "projectName": "whichNumberIsBigger",
-        "projectPath": "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\whichNumberIsBigger\\whichNumberIsBigger.csproj",
+        "projectUniqueName": "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\conditionals\\conditionals.csproj",
+        "projectName": "conditionals",
+        "projectPath": "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\conditionals\\conditionals.csproj",
         "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\whichNumberIsBigger\\obj\\",
+        "outputPath": "C:\\Users\\Albert\\Desktop\\firstsProjectsCSharp\\conditionals\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config"
