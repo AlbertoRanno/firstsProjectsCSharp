@@ -153,10 +153,15 @@ totalGradePoints += course3Credit * course3Grade;
 totalGradePoints += course4Credit * course4Grade;
 totalGradePoints += course5Credit * course5Grade;
 
+/*
+¿qué ocurre si tengo que dividir dos variables de tipo int, pero no quiero que el resultado se trunque? En ese caso, debo realizar una conversión de tipo de datos de int a decimal. La conversión es un tipo de conversión de datos que indica al compilador que trate temporalmente un valor como si fuera otro tipo de datos.
+Para convertir int a decimal, agrego el operador de conversión antes del valor. Usando el nombre del tipo de datos entre paréntesis delante del valor para convertirlo.
+*/
 decimal gradePointAverage = (decimal) totalGradePoints/totalCreditHours;
+//Esto me va a mostrar un nro con muchos decimales, si quisiera solo dos decimales puedo usar este artilugio:
 
-int leadingDigit = (int) gradePointAverage;
-int trailingDigits = (int) (gradePointAverage * 100) - (leadingDigit * 100);
+int leadingDigit = (int) gradePointAverage; //capturo el 1er entero
+int trailingDigits = (int) (gradePointAverage * 100) - (leadingDigit * 100);//capturo los 1eros 2 decimales, como enteros (*)
 
 Console.WriteLine($"\n\nStudent: {studentName}\n");
 Console.WriteLine("Course\t\t\t\tGrade\tCredit Hours");
@@ -167,7 +172,61 @@ Console.WriteLine($"{course3Name}\t\t\t{course3Grade}\t\t{course3Credit}");
 Console.WriteLine($"{course4Name}\t\t{course4Grade}\t\t{course4Credit}");
 Console.WriteLine($"{course5Name}\t\t\t{course5Grade}\t\t{course5Credit}");
 
-Console.WriteLine($"\nFinal GPA:\t\t\t{leadingDigit}.{trailingDigits}");
+Console.WriteLine($"\nFinal GPA:\t\t\t{leadingDigit}.{trailingDigits}");//los presento con el punto (*)
 
+/*Tab stop locations are set at four-character intervals, and each tab will advance to the next tab stop location. If you have a string of five characters followed by a tab escape sequence, the escape sequence will advance to the tab stop at the eight-character location, filling the gap with space characters to create whitespace in the output. However, you can advance to the same location if you have a string of seven characters followed by a tab escape sequence. This makes tab escape sequences more noticeable when they occur further from the next tab stop location.
+*/
 
+// ARRANCANDO CON C# EN VS:
+/*
+To help with this process, developers use a specialized tool known as an integrated development environment (IDE).
+An IDE is a suite of tools that supports the full software development lifecycle.
 
+In the filtered list of available extensions, select C# for Visual Studio Code (powered by OmniSharp).
+
+Install the .NET SDK
+.NET is a cross-platform, open-source developer platform that can be used to develop different types of applications. It includes the software languages and code libraries used to develop .NET applications. You can write .NET applications in C#, F#, or Visual Basic.
+
+The .NET runtime is the code library that's required to run your C# applications. You may also see the .NET runtime referred to as the Common Language Runtime, or CLR. The .NET runtime isn't required to write your code, but it's required to actually run your applications.
+
+Check to see if .NET is already installed
+At the Terminal command prompt, type: dotnet --version and then press the Enter key.
+Si no está… descargarlo: 
+https://dotnet.microsoft.com/es-es/download
+
+to create a new console application in a specified folder, type dotnet new console -o ./CsharpProjects/TestProject and then press Enter.
+
+o si ya estoy en la carpeta deseada, simplemente: 
+ dotnet new console
+
+To compile a build of your application, enter the following command at the Terminal command prompt: dotnet build
+The dotnet build command builds the project and its dependencies into a set of binaries. The binaries include the project's code in Intermediate Language (IL) files with a .dll extension. Depending on the project type and settings, other files may also be included.
+
+To run your application, enter the following command at the Terminal command prompt:
+dotnet run
+
+The dotnet run command runs source code without any explicit compile or launch commands. It provides a convenient option to run your application from the source code with one command. It's useful for fast iterative development from the command line. The command depends on the dotnet build command to build the code.
+oBS! The .NET SDK is required in order to run .NET command line interface commands such as dotnet run.
+*/
+
+/*
+Subí a Git, antes de colocar el gitignore… SOLUCIÓN:
+
+Una vez confirmados los cambios, es decir, una vez has hecho commit a esos archivos por primera vez, los archivos ya forman parte del repositorio
+El primer paso sería eliminar esos archivos del repositorio. Para eso está el comando "rm". Sin embargo, ese comando tal cual, sin los parámetros adecuados, borrará el archivo también de nuestro directorio de trabajo, lo que es posible que no desees.
+
+Si quieres que el archivo permanezca en tu ordenador pero simplemente que se borre del repostorio tienes que hacerlo así.
+
+git rm --cached nombre_archivo
+Si lo que deseas es borrar un directorio y todos sus contenidos, tendrás que hacer algo así:
+
+git rm -r --cached nombre_directorio
+El parámetro "--cached" es el que nos permite mantener los archivos en nuestro directorio de trabajo.
+
+Asegurarse que estamos ignorando los archivos con
+.gitignore
+Hacer el commit para confirmar los cambios
+git commit -m 'Eliminados archivos no deseados'
+Enviar esos cambios al repositorio remoto
+git push origin main
+*/
