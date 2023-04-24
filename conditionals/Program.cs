@@ -54,4 +54,45 @@ else {
   Console.WriteLine("You win a kitten!");
 }
 
+/**********************************************************************/
 
+/*Le han pedido que agregue una característica al software de su empresa. La característica está pensada para mejorar la tasa de renovación de las suscripciones al software. Su tarea consiste en mostrar un mensaje de renovación cuando un usuario inicia sesión en el sistema de software y se notifica que su suscripción finaliza pronto. Para cumplir los requisitos, necesitará agregar un par de instrucciones de decisión para agregar lógica de rama a la aplicación.*/
+
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
+
+if (daysUntilExpiration <= 10)
+{
+  if (daysUntilExpiration <= 5)
+{
+  discountPercentage = 10;
+  if (daysUntilExpiration == 1)
+  {
+    discountPercentage = 20;
+    if(daysUntilExpiration < 1){
+      Console.WriteLine("You subscription has expired");
+    }else
+    {Console.WriteLine($"You subscription expires within a day!\nRenew now and save {discountPercentage}%!");}
+  }
+  else
+    {
+    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.\nRenew now and save {discountPercentage}%!");
+    }
+}
+else
+  {Console.WriteLine("Your subscription will expire soon. Renew now!");}
+}
+
+/*
+*Use una instrucción if para crear una rama en la lógica del código. La instrucción de decisión if ejecutará el código en su bloque de código si su expresión booleana es verdadera. De lo contrario, el runtime omitirá el bloque de código y continuará con la siguiente línea de código después de este.
+*Una expresión booleana es cualquier expresión que devuelve un valor booleano.
+*Los operadores booleanos compararán los dos valores a la izquierda y a la derecha para ver si son iguales, para compararlos, etc.
+*Un bloque de código está delimitado por llaves { }. Recopila líneas de código que deben tratarse como una sola unidad.
+*El operador Y lógico, &&, agrega dos expresiones y ambas subexpresiones deben ser verdaderas para que toda la expresión sea verdadera.
+*El operador O lógico, ||, agrega dos expresiones y si alguna de las subexpresiones es verdadera, toda la expresión lo es también.
+*La combinación de instrucciones if y else permite probar una condición y ejecutar código cuando una expresión booleana es verdadera, y ejecutar otro código si es falsa.
+*Puede anidar instrucciones if para limitar una posible condición. Aun así, considere la posibilidad de usar instrucciones if else y else if en su lugar.
+*Use else if para crear varias condiciones exclusivas.
+*El bloque else es opcional, pero siempre debe aparecer en último lugar.
+*/
