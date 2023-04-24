@@ -62,4 +62,3 @@ if (name.StartsWith("B"))
 {
     Console.WriteLine("The name starts with 'B'!");
 }
-
