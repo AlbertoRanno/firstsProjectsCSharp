@@ -1,5 +1,8 @@
-﻿
-/*The using statement enables you to write code that implements members of the System namespace without requiring you to specify System.For example, your code can use the Console.WriteLine() method without having to specify System.Console.WriteLine(). Among other things, the using statement makes your code easier to read.*/
+﻿/*Cuando se hace el update de un proyecto, es mejor comentar los cambios en un solo bloque al comienzo del archivo, que ir detallando linea a linea.
+
+En este caso, el update consistió en desglosar los resultados mostrados por consola. (Ver por un lado el promedio final, pero también, el promedio exclusivo de los exámenes, y la influencia de los créditos extras). Para tal fin, se crearon variables genéricas en el ciclo for each que permitieran calcular cada columna a mostrar.
+
+The using statement enables you to write code that implements members of the System namespace without requiring you to specify System.For example, your code can use the Console.WriteLine() method without having to specify System.Console.WriteLine(). Among other things, the using statement makes your code easier to read.*/
 using System;
 
 /*Utilizando ahora Arrays, Condicionales y ciclos Foreach, automotizar la obtención de promedios, para distintos alumnos. Teniendo en cuenta la cantidad exámenes y sus notas, los créditos extras (los cuales suman solo un 10%), y la asignación de las califiaciones correspondientes ("B-", "F", ...). Además, con mínimos cambios, se debe de poder agregar alumnos a voluntad */
@@ -25,7 +28,7 @@ int[] studentScores = new int[10];
 string currentStudentLetterGrade = "";
 
 //Títulos de las columnas de salida
-Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 
 
 foreach (string name in studentsNames)
@@ -53,12 +56,17 @@ foreach (string name in studentsNames)
 
   //Declaro variable genérica para guardar la suma de las notas del estudiante en cuestión
   decimal sumAssigmentScores = 0;
+  decimal sumExamScores = 0;
+  decimal sumCreditsScores = 0;
 
   //Declaro variable genérica para guardar el promedio de las notas del estudiante en cuestión
   decimal currentStudentGrade = 0;
+  decimal currentExamGrade = 0;
+  decimal currentCreditsGrade = 0;
+
+  int creditsAssignments = studentScores.Length - examAssignments;
 
   /*Lo siguiente es un mecanismo que lo que hace es que, las primeras 5 notas del array, las suma de forma directa. Pero de cada nota a partir de la sexta, inclusive, (el ELSE, de: gradedAssignments <= examAssignments), solo sume la décima parte, porque es lo que aportan los créditos extras*/
-
   int gradedAssignments = 0;
 
   foreach (int score in studentScores)
@@ -66,13 +74,22 @@ foreach (string name in studentsNames)
     gradedAssignments += 1;
 
     if (gradedAssignments <= examAssignments)
+    {
       sumAssigmentScores += score;
+      sumExamScores += score;
+    }
     else
+    {
       sumAssigmentScores += (decimal)score / 10;
+      sumCreditsScores += score;
+    }
   }
 
   //Calculo el promedio final, como la suma(incluye el 10% de cada créd. extra), sobre la cantidad de exámenes
   currentStudentGrade = (decimal)sumAssigmentScores / examAssignments;
+  currentExamGrade = (decimal)sumExamScores/ examAssignments;
+  currentCreditsGrade = (decimal)sumCreditsScores/ creditsAssignments;
+  decimal extraCreditPoint = currentStudentGrade - currentExamGrade;
 
   //Determino que calificación en string, se corresponde con cada promedio:
   if (currentStudentGrade >= 97)
@@ -113,7 +130,7 @@ foreach (string name in studentsNames)
 
   else currentStudentLetterGrade = "F";
 
-  Console.WriteLine($"{currentStudent}:\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+  Console.WriteLine($"{currentStudent}:\t\t{currentExamGrade}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentCreditsGrade} ({extraCreditPoint})");
 }
 
 Console.WriteLine("Press the Enter key to continue");
