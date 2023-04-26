@@ -31,3 +31,34 @@ int saleAmount = 1001;
 int discount = saleAmount > 1000 ? 100 : 50;
 
 Console.WriteLine($"Discount: {discount}"); // Discount: 100
+
+**** SWITCH
+
+Use la instrucción switch cuando tenga un valor con muchas coincidencias posibles; cada una de las cuales requiere una bifurcación en la lógica del código.
+Una sola sección switch que contiene lógica de código se puede emparejar con una o más etiquetas definidas por la palabra clave case.
+Use la palabra clave opcional default para crear una etiqueta y una sección switch que se usen cuando no coincida ninguna otra etiqueta de caso.
+
+int employeeLevel = 100;
+string employeeName = "John Smith";
+
+string title = "";
+
+switch (employeeLevel)
+{
+    case 100:
+    case 200:
+        title = "Senior Associate";
+        break;
+    case 300:
+        title = "Manager";
+        break;
+    case 400:
+        title = "Senior Manager";
+        break;
+    default:
+        title = "Associate";
+        break;
+}
+
+Console.WriteLine($"{employeeName}, {title}");
+

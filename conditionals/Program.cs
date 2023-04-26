@@ -9,9 +9,9 @@ De lo contrario, el jugador gana un gatito.*/
 
 Random dice = new Random(); // Creo una nueva instancia de la clase System.Random (un objeto) y almaceno ese objeto en la variable "dice"
 
-int roll1 = dice.Next(1,7); //llamo al método Random.Next() en el objeto "dice", 3 veces
-int roll2 = dice.Next(1,7); //restringiendo los limites en cada caso
-int roll3 = dice.Next(1,7); //y guardando cada valor en una variable
+int roll1 = dice.Next(1, 7); //llamo al método Random.Next() en el objeto "dice", 3 veces
+int roll2 = dice.Next(1, 7); //restringiendo los limites en cada caso
+int roll3 = dice.Next(1, 7); //y guardando cada valor en una variable
 
 //Para probar los condicionales:
 //  roll1 = 1; 
@@ -24,24 +24,24 @@ Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total} ");
 
 
 
-if((roll1 == roll2) || (roll2 == roll3) || (roll3 == roll1))
+if ((roll1 == roll2) || (roll2 == roll3) || (roll3 == roll1))
 {
-  if((roll1 == roll2) && (roll2 == roll3))
+  if ((roll1 == roll2) && (roll2 == roll3))
   {
-  Console.WriteLine("You rolled triples! + 6 bonues to total!");
-  total +=6;
+    Console.WriteLine("You rolled triples! + 6 bonues to total!");
+    total += 6;
   }
   else
   {
-  Console.WriteLine("You rolled doubles! + 2 bonues to total!");
-  total +=2;
-  } 
+    Console.WriteLine("You rolled doubles! + 2 bonues to total!");
+    total += 2;
+  }
 }
 
 if (total >= 16) //En tiempo de ejecución, se evalúa la expresión booleana "total > 14", si es true, se ejecuta el código entre {}, o, mejor dicho, el bloque de código
 {
   Console.WriteLine("You win a new car!"); //Un bloque de código es una colección de una o varias líneas de código delimitadas por un símbolo de llave de apertura y otro de cierre { }. Los bloques de código son fundamentales para comprender la organización y la estructura del código, y definen los límites del ámbito de la variable. 
-} 
+}
 else if (total >= 10)
 {
   Console.WriteLine("You win a new laptop!");
@@ -50,7 +50,8 @@ else if (total >= 7)
 {
   Console.WriteLine("You win a trip for two!");
 }
-else {
+else
+{
   Console.WriteLine("You win a kitten!");
 }
 
@@ -65,23 +66,25 @@ int discountPercentage = 0;
 if (daysUntilExpiration <= 10)
 {
   if (daysUntilExpiration <= 5)
-{
-  discountPercentage = 10;
-  if (daysUntilExpiration == 1)
   {
-    discountPercentage = 20;
-    if(daysUntilExpiration < 1){
-      Console.WriteLine("You subscription has expired");
-    }else
-    {Console.WriteLine($"You subscription expires within a day!\nRenew now and save {discountPercentage}%!");}
+    discountPercentage = 10;
+    if (daysUntilExpiration == 1)
+    {
+      discountPercentage = 20;
+      if (daysUntilExpiration < 1)
+      {
+        Console.WriteLine("You subscription has expired");
+      }
+      else
+      { Console.WriteLine($"You subscription expires within a day!\nRenew now and save {discountPercentage}%!"); }
+    }
+    else
+    {
+      Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.\nRenew now and save {discountPercentage}%!");
+    }
   }
   else
-    {
-    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.\nRenew now and save {discountPercentage}%!");
-    }
-}
-else
-  {Console.WriteLine("Your subscription will expire soon. Renew now!");}
+  { Console.WriteLine("Your subscription will expire soon. Renew now!"); }
 }
 
 /*
@@ -96,3 +99,63 @@ else
 *Use else if para crear varias condiciones exclusivas.
 *El bloque else es opcional, pero siempre debe aparecer en último lugar.
 */
+
+/**********************************************************************/
+
+// SKU = Stock Keeping Unit
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string type = "";
+string color = "";
+string size = "";
+
+switch (product[0])
+{
+  case "01":
+    type = "Sweat shirt";
+    break;
+  case "02":
+    type = "T-Shirt";
+    break;
+  case "03":
+    type = "Sweat pants";
+    break;
+
+  default:
+    type = "Other";
+    break;
+}
+
+switch (product[1])
+{
+  case "BL":
+    color = "Black";
+    break;
+  case "MN":
+    color = "Maroon";
+    break;
+  default:
+    color = "White";
+    break;
+
+}
+
+switch(product[2])
+{
+  case "S":
+  size = "Small";
+  break;
+  case "M":
+  size = "Medium";
+  break;
+  case "L":
+  size = "Large";
+  break;
+  default :
+  size = "One Size Fits All";
+  break;
+}
+
+Console.WriteLine($"Product: {size} {color} {type}");
