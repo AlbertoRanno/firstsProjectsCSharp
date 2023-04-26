@@ -87,8 +87,8 @@ foreach (string name in studentsNames)
 
   //Calculo el promedio final, como la suma(incluye el 10% de cada créd. extra), sobre la cantidad de exámenes
   currentStudentGrade = (decimal)sumAssigmentScores / examAssignments;
-  currentExamGrade = (decimal)sumExamScores/ examAssignments;
-  currentCreditsGrade = (decimal)sumCreditsScores/ creditsAssignments;
+  currentExamGrade = (decimal)sumExamScores / examAssignments;
+  currentCreditsGrade = (decimal)sumCreditsScores / creditsAssignments;
   decimal extraCreditPoint = currentStudentGrade - currentExamGrade;
 
   //Determino que calificación en string, se corresponde con cada promedio:
