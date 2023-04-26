@@ -9,7 +9,7 @@ De lo contrario, el jugador gana un gatito.*/
 
 Random dice = new Random(); // Creo una nueva instancia de la clase System.Random (un objeto) y almaceno ese objeto en la variable "dice"
 
-int roll1 = dice.Next(1,7); //llamo al método Random.Next() en el objeto dice, 3 veces
+int roll1 = dice.Next(1,7); //llamo al método Random.Next() en el objeto "dice", 3 veces
 int roll2 = dice.Next(1,7); //restringiendo los limites en cada caso
 int roll3 = dice.Next(1,7); //y guardando cada valor en una variable
 
