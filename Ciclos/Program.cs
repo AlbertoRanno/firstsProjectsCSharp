@@ -34,5 +34,3 @@ do
 
   Console.WriteLine($"do-while + continue: {current2}");
 } while (current2 != 7);
-
-

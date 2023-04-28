@@ -1,4 +1,27 @@
+**** DIFERENCIAS ENTRE FOREACH - FOR - DO WHILE - WHILE
+
+Lo que sepa o no, de la condición booleana que se evaluará, me ayudará a elegir entre estos:
+
+*for ejecuta su cuerpo mientras una expresión booleana especificada se evalúa como true.
+Se utiliza cuando se sabe cuantas veces se debe ejecutar el bucle.
+Es útil para iterar sobre una secuencia de valores numéricos o para realizar un número fijo de iteraciones.
+También cuando se necesita una inicialización de variables y una actualización de variables dentro del bucle.
+
+*foreach enumera los elementos de una colección y ejecuta su cuerpo para cada elemento de la colección.
+Se utiliza cuando se necesita iterar sobre los elementos de un array o lista.
+Es útil para recorrerlos y realizar una operación sobre cada uno de sus elementos.
+También se utiliza para evitar errores de desbordamiento o de índices incorrectos.
+
+*do-while ejecuta condicionalmente su cuerpo una o varias veces.
+Es útil cuando se necesita que el cuerpo del bucle se ejecute al menos una vez, independientemente de si la condición es verdadera o falsa, y luego se evalúa la condición para ver si se sigue ejecutando o no.
+
+*while no ejecuta condicionalmente su cuerpo o lo hace varias veces.
+Se utiliza cuando se necesita ejecutar un bloque de código mientras una condición sea verdadera, pero no se sabe cuantas veces se ejecutará el bucle.
+Es útil cuando se requiere una comprobación de condición al principio del bucle.
+
+
 **** FOR
+
 La instrucción de iteración "for" permite recorrer en iteración un bloque de código un número específico de veces.
 La instrucción de iteración "for" permite controlar todos los aspectos de la mecánica de la iteración mediante la modificación de las tres condiciones que se encuentran dentro de los paréntesis: el inicializador, la condición y el iterador.
 Es habitual utilizar la instrucción for cuando se necesita controlar la manera de recorrer en iteración cada elemento de una matriz.
@@ -21,7 +44,9 @@ for (int i = names.Length - 1; i >= 0; i--)
     Console.WriteLine(names[i]);
 }
 
+
 **** Foreach, NO sirve para reasignar valores. En cambio FOR si:
+
 
 string[] names = { "Alex", "Eddie", "David", "Michael" };
 foreach (var name in names)
@@ -36,7 +61,9 @@ for (int i = 0; i < names.Length; i++)
 
 foreach (var name in names) Console.WriteLine(name); (*)
 
+
 **** DO-WHILE   //  WHILE
+
 
 Las instrucciones do-while y while permiten controlar el flujo de ejecución del código recorriendo en bucle un bloque de código hasta que se cumpla una condición. Cuando se trabaja con la instrucción foreach, se itera una vez por cada elemento de forma secuencial, como una matriz. La instrucción for permite iterar un número predeterminado de veces y controlar el proceso de iteración. Las instrucciones do-while y while permiten recorrer en iteración un bloque de código con la intención de que la lógica que contiene afectará al momento de poder detener la iteración.
 
