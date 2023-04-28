@@ -24,6 +24,10 @@ Console.WriteLine("Press the Enter key to continue");
 
 
 ***********************************COMANDOS DE CONSOLA:
+//Para frenar la consola si cae en bucle:
+
+*********ctrl + C
+
 
 //Para crear un nuevo proyecto, con ubicación relativa (OJO donde estás parado):
 
