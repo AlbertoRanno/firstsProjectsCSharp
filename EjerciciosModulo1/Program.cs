@@ -303,6 +303,7 @@ E                             true        false
        
 */
 
+/*
 Console.WriteLine("Ejercicio 7 - Operadores Lógicos");
 Console.WriteLine("\tn1\t\t\tn2\t\t\tn3\t\t\tn4");
 bool n1 = true;
@@ -319,8 +320,10 @@ Console.WriteLine($"\"C\"\t{n1}\t\t\t{n2}\t\t\t{n3}\t\t\t{n4}");
 n3 = !n1 & n2;
 n4 = !n1 | n2;
 Console.WriteLine($"\"D\"\t{n1}\t\t\t{n2}\t\t\t{n3}\t\t\t{n4}");
-n3 = n1 ^ n2; //El operador "XOR" ("^"),actua como un "OR exclusivo": devuelve true, si y solo si,uno de los valores es True y el otro false. De lo contrario, devuelve false. 
+n3 = n1 ^ n2; // ALT + 94 = ^ "XOR"
 n4 = n1 ^ !n2;
 Console.WriteLine($"\"E\"\t{n1}\t\t\t{n2}\t\t\t{n3}\t\t\t{n4}");
 Console.WriteLine("Presione una tecla para continuar");
 Console.ReadLine();
+*/
+

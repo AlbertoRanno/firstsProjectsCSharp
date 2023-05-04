@@ -1,3 +1,26 @@
+**** Operador condicional ternario
+<condición>?<expresión1>:<expresión2>
+b = (a>0)? a : 0;     // Suponemos a y b de tipos enteros
+
+En el ejemplo, si el valor de la variable a es mayor a 0 se asignará a b el valor de a, en caso contrario el valor que se le asignará será 0. 
+
+Hay que tener en cuenta que este operador es asociativo por la derecha, por lo que una expresión como
+ a?b:c?d:e es equivalente a a?b:(c?d:e)
+
+No hay que confundir este operador con la instrucción condicional if, pues aunque su utilidad es similar al de ésta ,? devuelve un valor e if no.
+
+
+**** Los operadores && y || se diferencian de & y | en que los primeros realizan la evaluación perezosa y los segundos no. 
+
+La evaluación perezosa consiste en que si el resultado de evaluar el primer operando permite deducir el resultado de la operación, entonces no se evalúa el segundo y se devuelve dicho resultado directamente.
+
+La evaluación no perezosa consiste en evaluar siempre ambos operandos. Es decir, si el primer operando de una operación
+&& es falso, se devuelve false directamente, sin evaluar el segundo; y si el primer operando de una || es verdadero, se devuelve true directamente, sin evaluar el otro.
+
+****Operador XOR "^" (ALT + 94)
+El operador "XOR" ("^"),actua como un "OR exclusivo": devuelve true, si y solo si, uno de los valores es True y el otro false. De lo contrario, devuelve false. 
+La única diferencia con "||" es que,  en OR: "V || V dá V", mientras que en XOR: "V ^ V dá F"
+
 ****Eliminar llaves
 
 Si solo tiene una línea de código en un bloque de código, puede quitar las llaves y los espacios en blanco.
