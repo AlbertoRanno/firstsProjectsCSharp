@@ -47,7 +47,7 @@ UInt64       Enteros largos sin signo               64          [0-18.446.744.07
               //con decimales (SIEMPRE PUNTO ".")
               //por default, cualquier nro escrito con ".", es un Double, en C#.
               //Si quiero que el compilador entienda, que NO es un double, luego del nro tengo que agregarle el sufijo correspondiente. Ej. float numReal1 = 23.78369456456432132156784324538f;
-Single       Reales con 7 dígitos de precisión      32          [1,5×10-45 - 3,4×1038]           Float     4 bytes //Sufijo n
+Single       Reales con 7 dígitos de precisión      32          [1,5×10-45 - 3,4×1038]           Float     4 bytes //Sufijo f
 Double       Reales de 15-16 dígitos de precisión   64          [5,0×10-324 - 1,7×10308]         double    8 bytes //Sin Sufijo
 Decimal      Reales de 28-29 dígitos de precisión   128         [1,0×10-28 - 7,9×1028]           decimal  16 bytes //Sufijo m
 

@@ -327,3 +327,86 @@ Console.WriteLine("Presione una tecla para continuar");
 Console.ReadLine();
 */
 
+/*
+Ejercicio Adicional Laboratorio - Operadores 1
+
+Dados n1=5, n2=10 y n3=20. Informar:
+a) n1+n2
+b) n3-n1
+c) n1*n3
+d) n3/n2
+*/
+
+/*
+byte n1 = 5, n2 = 10, n3 = 20;
+Console.WriteLine($"n1+n2= {n1 + n2}\nn3-n1= {n3 - n1}\nn1*n3= {n1 * n3}\nn3/n2= {n3 / n2}");
+*/
+
+/*
+Ejercicio Adicional Laboratorio - Operadores 2
+
+Dados n1=10, n2=20 y n3=30. Informar:
+a) El total.
+b) El promedio.
+c) El resto entre n2 y n1.
+*/
+
+/*
+byte n1 = 10, n2 = 20, n3 = 30;
+Console.WriteLine($"Total = {n1 + n2 + n3}\nPromedio = {(n1+n2+n3)/3}\nResto entre n2 y n1 = { n2 % n1}");
+*/
+
+/* EJERCICIOS DESAFÍO
+Ejercicio 1
+Dadas las variables n1=true, n2=false y n3=true.
+Informar:
+a. n1 ^ n2
+b. (n1 & !n2) | n3
+c. (n1 | n2) & !n3
+*/
+
+/*
+bool n1 = true, n2 = false, n3 = true;
+Console.WriteLine("Ejercicio 1");
+Console.WriteLine($"n1 ^ n2 = {n1 ^ n2}\n(n1 & !n2) | n3 = {(n1 & !n2) | n3}\n(n1 | n2) & !n3 = {(n1 | n2) & !n3}");
+Console.WriteLine("Presione una tecla para continuar");
+Console.ReadLine();
+*/
+
+/*
+Ejercicio 2
+Declarar dos variables n1=5 y n2=10.
+Utilizando concatenación entre las variables y los literales, mostrar en pantalla la siguiente expresión:
+n1 es igual a 5, n2 es igual a 10 y n1 más n2 es igual a 15.
+*/
+
+/*
+byte n1 = 5, n2 = 10;
+Console.WriteLine("Ejercicio 2");
+Console.WriteLine("n1 es igual a " + n1 + ", n2 es igual a " + n2 + " y n1 más n2 es igual a " + (n1 + n2) );
+Console.WriteLine("Presione una tecla para continuar");
+Console.ReadLine();
+*/
+
+/*
+Ejercicio 3
+Haciendo uso de la constante IVA=21, que representa el porcentaje de IVA a aplicar a los siguientes productos, cuyo precio sin IVA se indica en la siguiente lista:
+● Remera: $59.90.
+● Pantalón: $99.90.
+● Campera: $149.90.
+Informar los precios con IVA de cada uno
+*/
+
+const int IVA= 21;
+
+decimal precioSinIVARemera = 59.90m, precioSinIVAPantalon = 99.90m, precioSinIVACampera = 149.90m;
+decimal precioFinalRemera = precioSinIVARemera * (100 + IVA) / 100;
+decimal precioFinalPantalon = precioSinIVAPantalon * (100 + IVA) / 100;
+double precioFinalCampera = (double)precioSinIVACampera * (100 + IVA) / 100;
+
+Console.WriteLine("Ejercicio 3 - Uso de constantes\n");
+Console.WriteLine($"Precio final Remera: \t${precioFinalRemera}");
+Console.WriteLine($"Precio final Pantalón: \t${precioFinalPantalon}");
+Console.WriteLine($"Precio final Campera: \t${precioFinalCampera}\n");
+Console.WriteLine("Presione una tecla para continuar");
+Console.ReadLine();
