@@ -15,12 +15,20 @@ string menuSelection = "";
 
 // array used to store runtime data, there is no persisted data
 string[,] ourAnimals = new string[maxPets, 6];
-/*La matriz ourAnimals se declara como se indica a continuación: string[,] ourAnimals = new string[maxPets, 6];. Sabe que el valor asignado a maxPets es 8. En esta declaración, maxPets especifica el número de elementos de la primera dimensión de la matriz, no el número de índice de base cero que se usa para hacer referencia a elementos de la matriz. Por lo tanto, aunque maxPets = 8, los números de índice de matriz van de 0 a 7. (*) */
+/*Esto define una matriz bidimensional, tiene una longitud de 8 filas (maxPets) y 6 columnas. La matriz está formada por elementos de tipo "string", lo que significa que cada celda de la matriz contendrá una cadena de texto.
+
+La línea de código utiliza la palabra clave "new" para crear una instancia de la matriz con el tamaño especificado de 8 filas y 6 columnas. Esto significa que la matriz es creada en tiempo de ejecución y se asigna un espacio en la memoria para almacenar los elementos de la matriz.
+
+La sintaxis de la declaración de la matriz utiliza la sintaxis de los corchetes dobles "[,]" para indicar que es una matriz bidimensional y el número entre los corchetes indica la longitud de la matriz en cada dimensión ([maxPets, 6]).
+
+La matriz puede ser accedida y modificada utilizando índices de fila y columna para acceder a elementos individuales.
+*/
 
 // create some initial ourAnimals array entries
-for (int i = 0; i < maxPets; i++)
-{
-  switch (i)
+for (int i = 0; i < maxPets; i++) //Armo la matriz:
+{ // cada fila (i) de la matriz, será una mascota, y cada columna, será una característica de la misma:
+  //animalSpecies | animalID | animalAge | animalPhysicalDescription | animalPersonalityDescription | animalNickname:
+  switch (i) 
   {
     case 0:
       animalSpecies = "dog";
@@ -65,7 +73,7 @@ for (int i = 0; i < maxPets; i++)
 
   }
 
-
+  //Por cada fila de la matriz, cada espacio, en las columnas del "0 al 5", se completará con lo siguiente:
   ourAnimals[i, 0] = "ID #: " + animalID;
   ourAnimals[i, 1] = "Species: " + animalSpecies;
   ourAnimals[i, 2] = "Age: " + animalAge;
@@ -92,25 +100,26 @@ do //el usuario ve al menos una vez el menú
   Console.WriteLine();
   Console.WriteLine("Enter your selection number (or type Exit to exit the program)");
 
-  readResult = Console.ReadLine();
+  readResult = Console.ReadLine(); // pause code execution
   if (readResult != null)
   {
     menuSelection = readResult.ToLower();
   }
 
-  // Console.WriteLine($"You selected menu option {menuSelection}.");
-  // Console.WriteLine("Press the Enter key to continue");
-
-  // // pause code execution
-  // readResult = Console.ReadLine();
-
-  switch (menuSelection)
+   switch (menuSelection)
   {
     case "1":
       //List all of our current pet information
       for (int i = 0; i < maxPets; i++) //(*)
       {
-
+        if (ourAnimals[i, 0] != "ID #: ")
+        {
+          Console.WriteLine();
+          for (int j = 0; j < 6; j++)
+          {
+            Console.WriteLine(ourAnimals[i, j]);
+          }
+        }
       }
       Console.WriteLine("Press the Enter key to continue");
       readResult = Console.ReadLine();
@@ -163,3 +172,4 @@ do //el usuario ve al menos una vez el menú
   }
 
 } while (menuSelection != "exit");
+
