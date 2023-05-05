@@ -337,7 +337,60 @@ Press the Enter key to continue.
 
     case "3":
       //Ensure animal ages and physical descriptions are complete
-      Console.WriteLine("Challenge Project - please check back soon to see progress.");
+      /*
+      Los animales nuevos deben agregarse a la matriz ourAnimals cuando llegan. Sin embargo, la edad de un animal y otras características físicas puede que se desconozcan hasta después del examen de un veterinario. Además, el alias y la personalidad de un animal puede que se desconozcan cuando una mascota llega por primera vez. Las nuevas características que está desarrollando se asegurarán de que exista un conjunto de datos completo para cada animal de la matriz ourAnimals.
+      Para asegurarse de que las edades de los animales y las descripciones físicas estén completas, el código debe:
+
+      Esta característica debe:
+
+Debe habilitarse dentro de la rama de aplicación adecuada (no se debe sobrescribir el código en la rama de código para la opción de menú 2).
+
+Omita cualquier animal de la matriz ourAnimals cuando el valor del identificador de la mascota sea el predeterminado.
+
+Muestre el valor del identificador de la mascota y solicite al usuario un valor de datos actualizado si faltan datos de la matriz de ourAnimals o están incompletos.
+
+Asegúrese de que se asigna un valor numérico válido a animalAge para todos los animales de la matriz ourAnimals que tienen datos asignados.
+
+Asegúrese de que se asigna una cadena válida a animalPhysicalDescription para todos los animales de la matriz ourAnimals que tienen datos asignados.
+
+Aplique las siguientes reglas de validación para animalAge.
+
+Debe ser posible convertir el valor especificado en el tipo de datos numérico.
+Aplique las siguientes reglas de validación para animalPhysicalDescription:
+
+Los valores no pueden ser null.
+Los valores no pueden tener cero caracteres.
+El desarrollador decide si aplicar otras restricciones.
+Informe al usuario de la aplicación cuando se cumplan todos los requisitos de datos y ponga la aplicación en pausa para asegurarse de que el mensaje se ve y se puede responder a él.
+      */
+
+      // for (int i = 0; i < maxPets; i++)
+      // {
+      //   int petAge = 0;
+      //   if (ourAnimals[i, 0] != "ID #: " && ourAnimals[i, 2] == "Age: ?")
+      //   {
+      //     Console.WriteLine($"Enter an age for {ourAnimals[i, 0]}");
+      //     readResult = Console.ReadLine();
+      //     if (readResult != null)
+      //     {
+      //       animalAge = readResult;
+
+      //       while (!int.TryParse(readResult, out petAge))
+      //       {
+      //         Console.Write("El valor ingresado no es numérico. Ingrese un valor numérico: ");
+      //         readResult = Console.ReadLine();
+      //       }
+      // //     }
+      // //   }
+
+      //   ourAnimals[i, 0] = "ID #: " + animalID;
+      //   ourAnimals[i, 1] = "Species: " + animalSpecies;
+      //   ourAnimals[i, 2] = "Age: " + petAge;
+      //   ourAnimals[i, 3] = "Nickname: " + animalNickname;
+      //   ourAnimals[i, 4] = "Physical description: " + animalPhysicalDescription;
+      //   ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
+      //  }
+
       Console.WriteLine("Press the Enter key to continue");
       readResult = Console.ReadLine();
       break;
