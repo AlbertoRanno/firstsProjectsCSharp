@@ -158,4 +158,141 @@ System.Web.UI.WebControls   Creación de interfaces de usuario basadas en ventan
 System.Windows.Forms        Creación de interfaces de usuario basadas en ventanas para aplicaciones estándar.
 System.XML                  Acceso a datos en formato XML.
 
+ ****************.NET es una colección de muchos elementos y personas que, de forma conjunta, crean un entorno eficaz para la compilación de aplicaciones.
 
+Los desarrolladores de software usan lenguajes de .NET, como C# y F#, para escribir código fuente. Cada línea de código que escriben expresa una instrucción o un comando que el equipo debe ejecutar mientras el programa se está ejecutando.
+
+Antes de que los desarrolladores de software puedan ejecutar su código, deben compilarlo primero. El compilador de .NET es un programa que convierte el código fuente en un lenguaje especial denominado lenguaje intermedio (IL). Al compilar el código en un formato "intermedio", se puede usar la misma base de código independientemente de dónde se ejecute el código, ya sea en Windows o Linux, o en hardware de equipo de 32 o 64 bits.
+
+A veces, las personas piensan equivocadamente que el lenguaje de programación C# es .NET. Sin embargo, C# y .NET son distintos. C# es una sintaxis de lenguaje de programación. Como parte de la sintaxis, puede hacer referencia y llamar a métodos definidos en bibliotecas de código .NET, o ensamblados. Además, para crear un ensamblado a partir del código de C#, se usa el compilador de C# que se instala con el SDK de .NET. El entorno de ejecución de .NET ejecuta ensamblados de .NET. 
+
+Todo el software se crea en capas, lo que significa que hay software que se ejecuta en distintos niveles de abstracción en un equipo:
+
+En el nivel más bajo, el software se comunica directamente con el hardware del equipo. Controla el flujo de datos en la placa base, los procesadores, la memoria y las unidades de disco duro.
+En el siguiente nivel, el software permite al usuario final proporcionar instrucciones a través de un sistema operativo.
+En el siguiente nivel, el software como .NET proporciona una manera de desarrollar y ejecutar aplicaciones.
+En el siguiente nivel, los marcos de trabajo de la aplicación y las bibliotecas de funcionalidad permiten crear rápidamente aplicaciones enriquecidas con menos esfuerzo que los métodos de desarrollo más antiguos permitidos.
+Una biblioteca de código encapsula la funcionalidad para un fin específico en un único ensamblado. Para .NET, hay miles de bibliotecas disponibles. Estas bibliotecas pueden ser propias o de terceros, y pueden ser comerciales o de código abierto. Las bibliotecas proporcionan una amplia gama de funcionalidades que puede usar en sus aplicaciones. Simplemente debe hacer referencia a esos ensamblados y llamar a los métodos necesarios. De esta manera, como desarrollador, se basa en el trabajo de otros desarrolladores de software. Ahorra tiempo y esfuerzo, ya que no tiene que compilar y mantener todas las características.
+
+Probablemente se preguntará qué modelos de aplicaciones admite cada marco de trabajo. Use la tabla siguiente para asignar un modelo de aplicación a un marco de trabajo de .NET.
+
+Modelo de aplicación	  Marco                         Notas
+Web	                    ASP.NET Core	                Marco para compilar lógica del lado servidor.
+
+Web	                    ASP.NET Core MVC	            Marco para compilar lógica del lado servidor para páginas web o API web.
+
+Web	                    ASP.NET Core, Razor Pages     Marco para compilar HTML generado por el servidor.
+
+Cliente web           	Blazor	                      Blazor forma parte de ASP.NET Core. Sus dos modos permiten la manipulación
+de Document Object Model (DOM) a través de sockets como un vehículo de comunicación para ejecutar código del lado servidor, o bien como una implementación WebAssembly para ejecutar C# compilado en un explorador.
+
+Escritorio	            WinForms	                    Marco para compilar aplicaciones clásicas de estilo Windows.
+
+Escritorio	    Windows Presentation Foundation (WPF)	Marco de trabajo para compilar aplicaciones de escritorio dinámicas 
+que se ajustan a distintos factores de forma. WPF permite que los elementos de formulario realicen movimientos, atenuaciones, deslizamientos y otros efectos con la ayuda de una biblioteca completa de animaciones.
+
+Móvil	                  Xamarin	                      Permite a los desarrolladores de .NET compilar aplicaciones para 
+dispositivos iOS y Android.
+
+Además, .NET habilita entornos conocidos de desarrollo de juegos de terceros y de código abierto y motores como Unity.
+
+****************
+Visual Studio 2022 es el entorno de desarrollo insignia de Microsoft. Millones de desarrolladores lo usan para compilar aplicaciones .NET. Una interfaz gráfica de usuario (que incluye menús, ventanas, diseñadores visuales, cuadros de diálogo y asistentes) guía a los desarrolladores por el proceso de desarrollo de aplicaciones. Visual Studio 2022 está disponible en tres ediciones: Community, Professional y Enterprise. Cada edición incluye herramientas distintas y tiene licencia para propósitos diferentes.
+
+Los desarrolladores que prefieran un flujo de trabajo de línea de comandos pueden usar una combinación de Visual Studio Code, el editor de código más popular del mundo, y la interfaz de línea de comandos de .NET, también conocida como CLI de .NET.
+
+Visual Studio y Visual Studio Code son dos herramientas diferentes que se utilizan para diferentes propósitos.
+
+Visual Studio es un entorno de desarrollo integrado (IDE) completo para crear aplicaciones de Windows, aplicaciones móviles, juegos, sitios web y servicios en la nube. Es una herramienta poderosa para programadores profesionales que requieren una variedad de funciones avanzadas como depuración, diseño de interfaz de usuario, pruebas automatizadas y colaboración en equipo.
+Para los desarrolladores que prefieren un entorno visual, Visual Studio 2022 es la mejor opción. Como puede imaginar, debido a la naturaleza exhaustiva y visual de Visual Studio 2022, se requiere más tiempo, ancho de banda y espacio en disco para descargar e instalar el programa. 
+
+
+Por otro lado, Visual Studio Code es un editor de código ligero y gratuito que se utiliza principalmente para la edición de código en proyectos más pequeños o para desarrolladores que prefieren un entorno de trabajo más simplificado. Es una herramienta muy popular para desarrollar aplicaciones web, aplicaciones móviles y proyectos de inteligencia artificial y ciencia de datos.
+
+En resumen, si estás trabajando en un proyecto complejo y necesitas una amplia gama de herramientas y funciones, entonces Visual Studio es una buena opción. Si estás trabajando en proyectos más pequeños o prefieres un editor de código más ligero y gratuito, entonces Visual Studio Code es una buena opción.
+
+****************
+Microsoft proporciona activamente un completo conjunto de documentación, tutoriales y aprendizaje. Encontrará materiales de aprendizaje en las modalidades populares que le ayudarán en cada paso del proceso de aprendizaje.
+
+En la tabla siguiente se muestran algunos de los excelentes recursos que podrían convertirse en favoritos para volver a utilizarlos.
+
+Resource	                 Propósito
+*Microsoft Learn	         Proporciona tutoriales de inicio rápido y documentación de referencia definitiva.
+
+*Patrones y prácticas	     Ayuda a los desarrolladores y arquitectos de software a encontrar soluciones que satisfagan necesidades comunes de desarrollo de aplicaciones. A menudo, los recursos superan los detalles de bajo nivel de escritura de código y profundizan en la elección de productos y servicios que permiten arquitecturas escalables aparentemente infinitas.
+
+*Vídeos de .NET	           Proporciona tutoriales de vídeo del equipo de .NET. Estos vídeos guían a los desarrolladores en los escenarios de uso comunes.
+
+*Microsoft Learn	         Proporciona laboratorios prácticos que le ayudarán a desarrollar sus habilidades mediante una combinación de instrucciones, ejercicios, elementos multimedia, pruebas de conocimientos y un método para llevar un seguimiento del progreso.
+
+****************Cómo funciona .NET en tiempo de ejecución
+
+*Compila el código intermedio en un formato binario la primera vez que se ejecuta el programa. El formato binario es específico de la plataforma y la arquitectura (por ejemplo, Windows de 64 bits) en el equipo en el que se ejecuta.
+*Busca el punto de entrada del programa y empieza a ejecutar cada instrucción en el orden adecuado.
+*Administra recursos del equipo, como la memoria y el acceso a la red. Cuando escucha que el entorno de ejecución de .NET "administra la memoria", significa que funciona con el sistema operativo para aprovisionar memoria para la aplicación. Cuando la aplicación ya no necesita los datos almacenados en memoria, una característica de recopilación de elementos no utilizados libera la memoria del sistema operativo sin instrucciones del desarrollador de software.
+*Protege el equipo del usuario del software que puede tener intenciones malintencionadas. También proporciona un nivel de aislamiento entre las aplicaciones.
+
+****************
+Paso a Paso en la ejecución de un código:
+
+Un comando para compilar el código nuevo invoca al compilador de C#. (dotnet build / run)
+
+El compilador de C# garantiza que el código se pueda compilar y esté libre de errores de sintaxis. Si no puede compilar el código, el compilador se detiene y envía un mensaje de error al panel Salida.
+
+Si el compilador de C# se ejecuta correctamente, el entorno de ejecución de .NET abre el ensamblado de .NET recién compilado. De forma predeterminada, busca en una clase denominada Program para buscar un método llamado Main() para empezar a ejecutar las instrucciones.
+
+Instrucción por instrucción, el entorno de ejecución de .NET evalúa cada línea de código. Ejecuta la instrucción y se mueve a la siguiente línea de código.
+
+En este caso, cuando finaliza la instrucción para imprimir las palabras "Hola mundo", la ruta de acceso en ejecución continúa hasta la línea siguiente, pero no encuentra nada. La ruta de acceso finaliza y el entorno de ejecución de .NET quita el programa de su memoria. Mientras tanto, la salida de la instrucción WriteLine() se devuelve al explorador web.
+
+Esta secuencia de eventos, y la división básica de responsabilidades entre un lenguaje de programación, un compilador y un entorno de ejecución son los conceptos más importantes de entender para empezar.
+
+****************
+.NET es popular en las empresas por diversos motivos. Entre las ventajas se incluyen su ecosistema y su integración con otros productos de Microsoft, incluidos los servicios en la nube de Azure y los productos de servidor locales. Además, .NET es un sistema fuertemente tipado, por lo que evita muchos de los errores que pueden surgir en sistemas débilmente tipados. Los desarrolladores pueden optar por usar un paradigma basado en objetos en C# o un paradigma basado en la funcionalidad en F# . Usan el lenguaje que mejor se adapte a los tipos de problemas que necesitan resolver.
+
+Elija .NET para aplicaciones de IA y en la nube
+El SDK de Azure para .NET permite a los desarrolladores aprovisionar y administrar recursos de Azure. Como alternativa, Azure App Service y Azure Functions pueden hospedar aplicaciones compiladas con lenguajes .NET.
+
+ML.NET es una biblioteca de aprendizaje automático gratuita para los lenguajes .NET. Habilita las funcionalidades de análisis y predicción de Machine Learning basadas en modelos.
+
+Elija .NET para compilar aplicaciones de IoT
+Puede usar .NET para compilar aplicaciones de IoT para escenarios y dispositivos IoT. Las aplicaciones de IoT suelen interactuar con sensores, pantallas y dispositivos de entrada que requieren el uso de pines de E/S de uso general (GPIO), puertos serie o hardware similar. Por ejemplo, puede encontrar bibliotecas que funcionan con paneles populares, como Raspberry Pi y Hummingboard.
+
+****************
+1. Imagine que usó código de C# para crear una aplicación. Después de ejecutar el código, detecta un error en la lógica. ¿Cómo se puede encontrar el error?
+
+NO - El compilador de C# le ayudará a encontrar el error en la lógica.
+El compilador identificará los errores de compilación de sintaxis de C#. Sin embargo, no detectará errores en la lógica.
+
+NO - El entorno de ejecución de .NET le ayudará a encontrar el error en la lógica.
+
+NO - Una clase de la biblioteca de .NET le ayudará a encontrar el error en la lógica.
+
+SI - Las características de depuración de Visual Studio o la CLI de .NET pueden ayudarle a encontrar el error en la lógica.
+Correcto. Puede usar las herramientas de depuración para establecer puntos de interrupción, recorrer el código y supervisar el valor de las variables para ayudarle a encontrar errores.
+
+2. ¿Cuál de los siguientes términos describe un marco de trabajo de aplicación que combina varias bibliotecas relacionadas, junto con proyectos de inicio, plantillas de archivo, generadores de código y otras herramientas para que los desarrolladores puedan compilar una aplicación con un fin específico?
+
+NO - Carga de trabajo
+
+SI - Modelo de aplicación
+Correcto. Un modelo de aplicación permite crear un tipo específico de aplicación, como una aplicación web o una aplicación móvil.
+
+NO - Un ensamblado
+
+NO - Entorno
+En un contexto de desarrollo de software, el término entorno suele hacer referencia a la colección de herramientas que se usan para compilar aplicaciones.
+
+3. ¿Cuál de los siguientes términos describe mejor el instalador necesario para crear proyectos, escribir código, llamar a métodos en bibliotecas, compilar código y compilar, depurar y ejecutar aplicaciones?
+
+NO - Entorno de ejecución de .NET
+El entorno de ejecución de .NET solo puede ejecutar ensamblados de .NET. Estamos buscando una respuesta que abarque más funcionalidades.
+
+
+NO - Bibliotecas base de .NET
+
+SI - SDK de .NET
+Correcto.
+
+
+NO - Ensamblado .NET
