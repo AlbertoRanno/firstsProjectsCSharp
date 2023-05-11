@@ -169,3 +169,59 @@ Si usuario no es “Pepito” y clave=
 // { Console.WriteLine("Usuario incorrecto"); }
 // else if ( usuario.ToLower() == "pepito" && int.Parse(clave) != 1234)
 // {Console.WriteLine("Contraseña incorrecta");}
+
+
+
+/*************************************************************** Laboratorio Adicional 2 Ejercicio 4
+Ingresar dos números y ofrecer al usuario un menú con las siguientes opciones:
+"1-suma 2-resta 3-producto 4-división"
+Luego, mostrar el resultado de la operación aritmética elegida"*/
+
+double numero1 = 0, numero2 = 0; //********DUDA!!!! POR QUÉ SI NO LOS INICIALIZO, DA ERROR ASIGNARLES EL VALOR CUANDO SON INGRESADOS??
+
+string? readResult;
+string menuSelection = "";
+
+Console.Clear();
+Console.WriteLine("Bienvenidos a la calculadora básica en C#\n Ingrese un número:");
+readResult = Console.ReadLine();
+if (readResult != null)
+{
+  numero1 = double.Parse(readResult);
+}
+Console.WriteLine("Ingrese otro número:");
+readResult = Console.ReadLine();
+if (readResult != null)
+{
+  numero2 = double.Parse(readResult);
+}
+Console.WriteLine($"Usted ingresó {numero1} y {numero2}.\n Elija una de las siguientes opciones: ");
+Console.WriteLine("\t Presione \"1\" - Para sumar los números ingresados");
+Console.WriteLine("\t Presione \"2\" - Para restar los números ingresados");
+Console.WriteLine("\t Presione \"3\" - Para obtener el producto entre los números ingresados");
+Console.WriteLine("\t Presione \"4\" - Para realizar la división entre los números ingresados");
+
+readResult = Console.ReadLine();
+if (readResult != null)
+{
+  menuSelection = readResult.ToLower();
+}
+
+switch (int.Parse(menuSelection))
+{
+  case 1:
+    Console.WriteLine($"La suma de {numero1} y {numero2} es igual a {numero1 + numero2} ");
+    break;
+  case 2:
+    Console.WriteLine($"La resta de {numero1} y {numero2} es igual a {numero1 - numero2} ");
+    break;
+  case 3:
+    Console.WriteLine($"El producto entre {numero1} y {numero2} es igual a {numero1 * numero2} ");
+    break;
+  case 4:
+    Console.WriteLine($"La división entre {numero1} y {numero2} es igual a {numero1 / numero2} ");
+    break;
+  default:
+    Console.WriteLine("No es una operación válida");
+    break;
+}
