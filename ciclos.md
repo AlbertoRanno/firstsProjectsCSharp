@@ -36,6 +36,58 @@ for (int i = 0; i < 10; i+=2)
     if (i == 8) break;
 }
 
+Ejemplos de FOR */
+
+//Forma Clásica:
+for (int i = 1; i <= 10; i++)
+  Console.WriteLine(i);
+
+//También se podría escribir así (dejando aún en mayor evidencia, su parecido al while)
+int i = 1;
+for (; i <= 10;)
+{
+  Console.WriteLine(i);
+  i++;
+}
+
+//Versión con más de una variable:
+for (int i = 0, j = 10; i <= 10 && j > 3; i++, j--)
+{
+  Console.WriteLine($"i: {i} - j: {j}");
+}
+
+/*Para trabajar en 2 dimensiones, se suelen usar DOS FOR ANIDADOS, donde uno recorre las filas y otro las columnas.
+En este caso particular, el limite de j (columnas, se achica en uno cada vez que se baja a la siguiente fila)
+  12345   j
+1 @@@@@
+2 @@@@
+3 @@@
+4 @@
+5 @
+i
+*/
+byte limiteJ = 5;
+
+for (byte i = 1; i <= 5; i++)
+{
+  for (int j = 1; j <= limiteJ; j++)
+  {
+    Console.Write("@");
+  }
+  Console.WriteLine();
+  limiteJ--;
+}
+
+/*También se podría poner como:*/
+for (byte i = 1; i <= 5; i++, limiteJ--)
+{
+  for (int j = 1; j <= limiteJ; j++)
+  {
+    Console.Write("@");
+  }
+  Console.WriteLine();
+}
+
 --
 
 string[] names = { "Alex", "Eddie", "David", "Michael" };
