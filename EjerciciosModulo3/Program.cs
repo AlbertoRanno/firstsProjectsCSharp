@@ -92,12 +92,12 @@ Imprimir la siguiente figura:
 @@@@
 @@@@@
 */
-// string arroba = "@", suma = "";
+// string arroba = "@", concatenacion = "";
 
 // for (byte i = 1; i <= 5; i++)
 // {
 
-//   Console.WriteLine(suma += arroba);
+//   Console.WriteLine(concatenacion += arroba);
 
 // }
 
@@ -123,24 +123,215 @@ En este caso particular, el limite de j (columnas, se achica en uno cada vez que
 5 @
 i
 */
-byte limiteJ = 5;
+// byte limiteJ = 5;
 
-for (byte i = 1; i <= 5; i++)
-{
-  for (int j = 1; j <= limiteJ; j++)
-  {
-    Console.Write("@");
-  }
-  Console.WriteLine();
-  limiteJ--;
-}
+// for (byte i = 1; i <= 5; i++)
+// {
+//   for (int j = 1; j <= limiteJ; j++)
+//   {
+//     Console.Write("@");
+//   }
+//   Console.WriteLine();
+//   limiteJ--;
+// }
 
-/*También se podría poner como:*/
-for (byte i = 1; i <= 5; i++, limiteJ--)
-{
-  for (int j = 1; j <= limiteJ; j++)
-  {
-    Console.Write("@");
-  }
-  Console.WriteLine();
-}
+// /*También se podría poner como:*/
+// for (byte i = 1; i <= 5; i++, limiteJ--)
+// {
+//   for (int j = 1; j <= limiteJ; j++)
+//   {
+//     Console.Write("@");
+//   }
+//   Console.WriteLine();
+// }
+
+
+
+
+
+/***************************************
+Ejercicio 1
+Imprimir los números del 1 al 10 uno abajo del otro. */
+// for (byte i = 1; i <= 10; i++)
+//   Console.WriteLine(i);
+
+
+
+/***************************************
+Ejercicio 2
+Imprimir los números del 1 al 10 salteando de a 2, uno abajo del otro. */
+// for (byte i = 1; i <= 10; i+=2)
+//   Console.WriteLine(i);
+
+
+
+/***************************************
+Ejercicio 3
+Imprimir los números del 10 al 1 uno abajo del otro. */
+// for (byte i = 10; i >= 1; i--)
+//   Console.WriteLine(i);
+
+
+
+/***************************************
+Ejercicio 4
+Imprimir la suma de los números impares del 1 al 10 uno abajo del otro. */
+// short suma = 0;
+// for (byte i = 1; i <= 10; i++)
+//   if (i % 3 == 0) suma += i;
+
+// Console.WriteLine(suma);
+
+
+
+
+/***************************************
+Ejercicio 5
+Mostrar la resta de, la multiplicación de los números del 1 al 5 con la suma de los números del 1 al 5.
+(1*2*3*4*5) - (1+2+3+4+5)*/
+// int multiplicacion = 1, suma = 0;
+// for (int i = 1; i <= 5; i++)
+// {
+//   multiplicacion *= i;
+//   suma += i;
+// }
+// Console.WriteLine($"(1*2*3*4*5) - (1+2+3+4+5) = {multiplicacion} - {suma} = {multiplicacion - suma}");
+
+
+
+
+/***************************************
+Ejercicio 6
+Imprimir la siguiente figura:
+
+@
+
+@
+
+@
+
+@
+*/
+// for (int i = 1; i <= 8; i++)
+// {
+//   if (i % 2 == 0) Console.WriteLine("@");
+//   else Console.WriteLine();
+// }
+
+
+
+
+
+/***************************************
+Ejercicio 7
+Imprimir la siguiente figura:
+1
+2   @
+3
+4   @@
+5
+6   @
+7
+8   @@
+9
+10  @
+*/
+// for (int i = 1; i <= 10; i++)
+// {
+//   if (i % 2 == 0)
+//   {
+//     if (i % 4 == 0)
+//       Console.WriteLine("@@");
+//     else
+//       Console.WriteLine("@");
+//   }
+//   else Console.WriteLine();
+// }
+
+
+
+
+
+/***************************************
+Ejercicio 8
+Imprimir la siguiente figura:
+@
+@@
+@@@
+@@@@
+@@@@@
+*/
+
+// int limiteJ = 1;
+// Console.WriteLine();
+// for (int i = 1; i <= 5; i++)
+// {
+//   for (int j = 1; j <= limiteJ; j++) // limiteJ se comporta como "i", => podría haber sido: for (int j = 1; j < i; j++)
+//   {
+//     Console.Write("@");
+//   }
+//   limiteJ++;
+//   Console.WriteLine("\n");
+// }
+
+
+
+
+/***************************************
+Ejercicio 9
+Imprimir la siguiente figura:
+@@@@@
+@@@@
+@@@
+@@
+@
+*/
+
+// int limiteJ = 5;
+// Console.WriteLine();
+// for (int i = 1; i <= 5; i++)
+// {
+//   for (int j = 1; j <= limiteJ; j++)
+//   {
+//     Console.Write("@");
+//   }
+//   limiteJ--;
+//   Console.WriteLine("\n");
+// }
+
+
+
+
+/***************************************
+Ejercicio 10
+Imprimir la siguiente figura:
+1
+2   @
+3
+4   @@
+5
+6   @@@
+7
+8   @@@@
+9
+10  @@@
+11
+12  @@
+13
+14  @
+*/
+
+// int limiteJ = 1;
+// Console.WriteLine();
+// for (int i = 1; i <= 14; i++)
+// {
+//   for (int j = 1; j <= limiteJ; j++)
+//     Console.Write("@");
+
+//   if (i < 4)
+//     limiteJ++;
+//   else
+//     limiteJ--;
+
+//   Console.WriteLine("\n");
+// }
