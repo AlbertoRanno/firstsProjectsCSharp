@@ -1,72 +1,94 @@
-﻿// PROYECTO INTEGRADOR - VERSION PROPIA
+﻿/* PROYECTO INTEGRADOR - VERSION PROPIA
 
-string? readResult;
-string nombre = "", apellido = "", edad = "", email = "", confirmacion = "", codigoCarrera = "",
-carrera1 = "Programación .NET", carrera2 = "Programación Java", carrera3 = "Programación PHP";
+Correciones realizadas, a recordar:
+-los nombres de las variables, comienzan con Mayúscula, dado que por convención se usa PascalCase (y NO camelCase como en JS)
+-los nombres de variables constantes, por convención, se escriben con todas las letras MAYÚSCULAS
+-la Edad, si bien, no se utiliza para cálculos, NO conviene almacenarla como string, por dos motivos:
+1- en una BBDD siempre va a estar como valor numérico, y
+2- dentro de los numéricos, va a ser byte, xq es el que menos memoria ocupa
+-Con Confirmacion, pasa lo mismo, antes que string, conviene char. 
+-OJO que char lleva comillas simples
+*/
+
+string? ReadResult;
+string Nombre = "", Apellido = "", Email = "", ValueEntered = "";
+byte Edad = 0, CodigoCarrera = 0;
+char Confirmacion = 's';
+const string CARRERA1 = "Programación .NET", CARRERA2 = "Programación Java", CARRERA3 = "Programación PHP";
+bool ValidNumber = false;
 
 Console.Clear();
-Console.WriteLine("Bienvenido a la app!\nIngresá tu nombre:\r");
-readResult = Console.ReadLine();
-if (readResult != null)
+Console.WriteLine("Bienvenido a la app!\n");
+Console.Write("Ingresá tu nombre: ");
+ReadResult = Console.ReadLine();
+if (ReadResult != null)
 {
-  nombre = readResult;
+  Nombre = ReadResult;
 }
 
-Console.WriteLine("\nIngresá tu apellido:\r");
-readResult = Console.ReadLine();
-if (readResult != null)
+Console.Write("\nIngresá tu apellido: ");
+ReadResult = Console.ReadLine();
+if (ReadResult != null)
 {
-  apellido = readResult;
+  Apellido = ReadResult;
 }
 
-Console.WriteLine("\nIngresá tu edad: \r");
-readResult = Console.ReadLine();
-if (readResult != null)
+do
 {
-  edad = readResult;
+  Console.Write("\nIngresá tu edad: ");
+  ReadResult = Console.ReadLine();
+  if (ReadResult != null)
+  {
+    ValueEntered = ReadResult;
+  }
+  ValidNumber = byte.TryParse(ValueEntered, out Edad);
+  if (ValidNumber == false) Console.WriteLine("En formato numérico. Ejemplo: Edad = 37");
+} while (ValidNumber == false);
+
+
+Console.Write("\nIngresá tu correo electrónico: ");
+ReadResult = Console.ReadLine();
+if (ReadResult != null)
+{
+  Email = ReadResult;
 }
 
-Console.WriteLine("\nIngresá tu correo electrónico: \r");
-readResult = Console.ReadLine();
-if (readResult != null)
-{
-  email = readResult;
-}
-
-Console.WriteLine($"\n<<<<< Datos del alumno >>>>>:\n Nombre: {nombre}\n Apellido: {apellido}\n Edad: {edad}\n Email: {email}");
+Console.WriteLine($"\n<<<<< Datos del alumno >>>>>:\n Nombre: {Nombre}\n Apellido: {Apellido}\n Edad: {Edad} \n Email: {Email}");
 Console.WriteLine("\n¿ Los datos son correctos ? - 'S' para confirmar, 'N' para cancelar\r");
-readResult = Console.ReadLine();
-if (readResult != null)
+ReadResult = Console.ReadLine();
+if (ReadResult != null)
 {
-  confirmacion = readResult;
+  Confirmacion = char.Parse(ReadResult);
 }
 
-if (confirmacion.ToLower() == "s")
+
+
+if (Confirmacion == 's' || Confirmacion == 'S')
 {
   Console.WriteLine("\n<<< Selecciona el código de la carrera elegida >>>");
-  Console.WriteLine($"\n1. {carrera1}\n2. {carrera2}\n3. {carrera3}\n\r");
-  readResult = Console.ReadLine();
-  if (readResult != null)
+  Console.WriteLine($"\n1. {CARRERA1}\n2. {CARRERA2}\n3. {CARRERA3}\n\r");
+  ReadResult = Console.ReadLine();
+  if (ReadResult != null)
   {
-    codigoCarrera = readResult;
+    CodigoCarrera = byte.Parse(ReadResult);
   }
 
-  switch (codigoCarrera)
+  switch (CodigoCarrera)
   {
-    case "1":
+    case 1:
       Console.WriteLine($"\n<<<<< Constancia de inscripción >>>>>:");
-      Console.WriteLine($"\nAlumno: {nombre} {apellido}\nCorreo electrónico: {email}");
-      Console.WriteLine($"{carrera1}");
+      Console.WriteLine($"\nAlumno: {Nombre} {Apellido}\nCorreo electrónico: {Email}");
+      Console.WriteLine($"{CARRERA1}");
       break;
-    case "2":
+    case 2:
       Console.WriteLine($"\n<<<<< Constancia de inscripción >>>>>:");
-      Console.WriteLine($"\nAlumno: {nombre} {apellido}\nCorreo electrónico: {email}");
-      Console.WriteLine($"{carrera2}");
+      Console.WriteLine($"\nAlumno: {Nombre} {Apellido}\nCorreo electrónico: {Email}");
+      Console.WriteLine($"{CARRERA2}");
       break;
-    case "3":
+    case 3:
       Console.WriteLine($"\n<<<<< Constancia de inscripción >>>>>:");
-      Console.WriteLine($"\nAlumno: {nombre} {apellido}\nCorreo electrónico: {email}");
-      Console.WriteLine($"{carrera3}");
+      Console.WriteLine($"\nAlumno: {Nombre} {Apellido}\nCorreo electrónico: {Email}");
+      Console.WriteLine($"{CARRERA3}");
       break;
     default:
       Console.WriteLine($"Carrera inexistente");
